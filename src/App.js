@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import CardsBenefits from "./components/Cards/CardBenefits";
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Navbar />
-    </div>
+      <main>
+        <CardsBenefits />
+      </main>
+    </Fragment>
   );
 }
 
