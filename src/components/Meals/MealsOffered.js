@@ -6,28 +6,28 @@ import classes from "./MealsOffered.module.css";
 
 const OFFERED_MEALS = [
   {
-    id: "m1",
+    id: "o1",
     name: "Mushroom Burger",
     description:
       "One or more patties made out of mushroom as a replacement, instead of the traditionally used ground meat.",
     price: 70,
   },
   {
-    id: "m2",
+    id: "o2",
     name: "Neapolitan pizza",
     description:
       "Buffalo mozzarella (produced from the milk of Italian Mediterranean buffalo)",
     price: 105,
   },
   {
-    id: "m3",
+    id: "o3",
     name: "Chicken Curry",
     description:
       "Chicken and vegetables, or just vegetables, in a sauce containing hot spices.",
     price: 90,
   },
   {
-    id: "m4",
+    id: "o4",
     name: "Salad",
     description:
       "varieties of lettuce, garden cress and watercress, endives, cabbage, spinach, escarole, romaine (cos), arugula, and fresh herbs.",
