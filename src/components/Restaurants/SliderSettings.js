@@ -1,5 +1,11 @@
 import React from "react";
 import Restaurants from "./Restaurants";
+import Mac from "../../images/Mac.jpg";
+import BK from "../../images/BK.png";
+import Popeys from "../../images/Popeys.png";
+import KFC from "../../images/KFC.jpg";
+import Pizza from "../../images/Pizza.avif";
+import pizzahot from '../../images/pizzahot.png';
 
 import classes from "./Restaurants.module.css";
 
@@ -8,32 +14,32 @@ const SliderSettings = () => {
     {
       id: 1,
       name: "Restaurant 1",
-      logo: "restaurant1.jpg",
+      logo: Mac,
     },
     {
       id: 2,
       name: "Restaurant 2",
-      logo: "restaurant2.jpg",
+      logo: BK,
     },
     {
       id: 3,
       name: "Restaurant 3",
-      logo: "restaurant3.jpg",
+      logo: Popeys,
     },
     {
       id: 4,
       name: "Restaurant 4",
-      logo: "restaurant4.jpg",
+      logo: KFC,
     },
     {
       id: 5,
       name: "Restaurant 5",
-      logo: "restaurant5.jpg",
+      logo: Pizza,
     },
     {
       id: 6,
       name: "Restaurant 6",
-      logo: "restaurant6.jpg",
+      logo: pizzahot,
     },
   ];
 

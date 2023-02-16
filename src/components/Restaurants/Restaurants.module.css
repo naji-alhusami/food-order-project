@@ -6,22 +6,22 @@
 .slider {
   display: flex;
   flex-direction: row;
-  /* /* overflow: hidden; */
+  justify-content: center;
+  overflow: hidden;
   height: 200px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .slide {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  margin-right: 20px;
-  background-color: #eee;
+  width: 10px;
+  height: 100px;
+  margin-right: 0;
 }
 
 .slide img {
-  width: 100%;
+  width: 45%;
   height: 100%;
-  object-fit: contain;
+  border-radius: 100px;
+  /* object-fit: contain; */
 }
