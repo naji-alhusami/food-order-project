@@ -1,0 +1,27 @@
+.restaurants {
+  color: #2ddf5c;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  /* /* overflow: hidden; */
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slide {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-color: #eee;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

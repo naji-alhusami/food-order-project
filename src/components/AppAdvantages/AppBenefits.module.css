@@ -3,7 +3,7 @@
   max-width: 45rem;
   width: 20%;
   margin: auto;
-  margin:-10rem 3rem 0 3rem;
+  margin:2rem 3rem;
   position: relative;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -17,6 +17,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.beneits {
+  color: #2ddf5c;
+  text-align: center;
 }
 
 .summary h2 {
