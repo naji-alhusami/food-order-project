@@ -5,7 +5,7 @@ import foodImage from "../../images/Image1.jpg";
 import appIcon from "../../images/app-icon.png";
 import classes from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <Fragment>
       <nav className={classes.Navbar}>
@@ -13,7 +13,7 @@ const Navbar = () => {
           <img src={appIcon} alt="app-icon" />
           <h1 className={classes.header}>FOOD2DOOR</h1>
         </div>
-        <BasketButton />
+        <BasketButton showBasket={props.showBasket} />
       </nav>
       <div className={classes["food-image"]}>
         <img src={foodImage} alt="foodImage" />
