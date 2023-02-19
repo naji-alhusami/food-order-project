@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./BasketButton.module.css";
 
-const BasketButton = () => {
+const BasketButton = (props) => {
   return (
-    <button className={classes.button}>
+    <button className={classes.button} onClick={props.showBasket}>
       <span className={classes.icon}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
