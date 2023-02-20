@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import BasketCard from "./BasketCard";
+import BasketContext from "../../store/BasketContext";
 
 import classes from "./Basket.module.css";
 
 const Basket = (props) => {
+  const basket_context = useContext(BasketContext);
+
   const basketOrders = (
     <ul className={classes["basket-meals"]}>
-      {[{ id: "o1", name: "burger", amount: 1, price: 70 }].map((order) => (
+      {basket_context.items.map((order) => (
         <li>{order.name}</li>
       ))}
     </ul>
@@ -17,13 +20,15 @@ const Basket = (props) => {
       {basketOrders}
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>150</span>
+        <span>{basket_context.totalAmount}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} onClick={props.hideBasket}>
           Close
         </button>
-        <button className={classes.button}>Order</button>
+        {basket_context.items.length > 0 && (
+          <button className={classes.button}>Order</button>
+        )}
       </div>
     </BasketCard>
   );
