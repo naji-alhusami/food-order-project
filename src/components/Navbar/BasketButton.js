@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import BasketContext from "../../store/BasketContext";
 import classes from "./BasketButton.module.css";
 
 const BasketButton = (props) => {
+  const basket_context= useContext(BasketContext);
+
+  const basketItemsNumber = basket_context.items.reduce((currentNumber, item)=>{
+    return currentNumber + item.amount;
+  },0)
+
   return (
     <button className={classes.button} onClick={props.showBasket}>
       <span className={classes.icon}>
@@ -14,7 +21,7 @@ const BasketButton = (props) => {
         </svg>
       </span>
       <span>MY BASKET</span>
-      <span className={classes.badge}>0</span>
+      <span className={classes.badge}>{basketItemsNumber}</span>
     </button>
   );
 };
