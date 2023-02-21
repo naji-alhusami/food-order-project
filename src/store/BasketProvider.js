@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import { act } from "react-dom/test-utils";
 import BasketContext from "./BasketContext";
 
 const defaultBasketState = {
@@ -56,6 +57,10 @@ const basketReducer = (state, action) => {
     };
   }
 
+  if (action.type === "CLEAR") {
+    return defaultBasketState;
+  }
+
   return defaultBasketState;
 };
 
@@ -73,11 +78,16 @@ const BasketProvider = (props) => {
     dispatchBasketAction({ type: "DELETE", id: id });
   };
 
+  const clearBasketHandler = () => {
+    dispatchBasketAction({ type: "CLEAR" });
+  };
+
   const basketContext = {
     items: basketState.items,
     totalAmount: basketState.totalAmount,
     addItem: addItemHandler,
     deleteItem: deleteItemHandler,
+    clearBasket: clearBasketHandler,
   };
 
   return (
