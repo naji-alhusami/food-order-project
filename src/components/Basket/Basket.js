@@ -44,7 +44,7 @@ const Basket = (props) => {
         <span>Total Amount</span>
         <span>{basket_context.totalAmount} TL</span>
       </div>
-      {orderForm && <Order />}
+      {orderForm && <Order hideBasket={props.hideBasket} />}
       {!orderForm && (
         <div className={classes.actions}>
           <button className={classes["button--alt"]} onClick={props.hideBasket}>
