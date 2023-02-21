@@ -10,7 +10,6 @@ const Meal = ({ id, name, description, price }) => {
   const inputRef = useRef();
 
   const formSubmitHandler = (event) => {
-    console.log(event);
     event.preventDefault();
 
     const enteredMealAmount = inputRef.current.value;

@@ -36,13 +36,13 @@ const SliderContent = (props) => {
           src={LeftArrow}
           alt="LeftArrow"
           className={classes.arrow}
-          onClick={hendlePrevClick}
+          onClick={hendleNextClick}
         />
         <img
           src={RightArrow}
           alt="RightArrow"
           className={classes.arrow}
-          onClick={hendleNextClick}
+          onClick={hendlePrevClick}
         />
       </div>
     </>
