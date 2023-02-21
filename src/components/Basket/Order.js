@@ -47,6 +47,13 @@ const Order = (props) => {
     if (!formIsValid) {
       return;
     }
+
+    props.orderSubmit({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postalCode: enteredPostal,
+    });
   };
 
   const nameClasses = `${classes.control} ${

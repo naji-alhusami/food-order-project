@@ -5,6 +5,7 @@ const BasketContext = React.createContext({
   totalAmount: 0,
   addItem: (item) => {},
   deleteItem: (id) => {},
+  clearBasket: () => {},
 });
 
 export default BasketContext;
