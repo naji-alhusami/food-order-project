@@ -8,9 +8,13 @@ import classes from "./Basket.module.css";
 const Basket = (props) => {
   const basket_context = useContext(BasketContext);
 
-  const basketItemAddHandler = (item) => {};
+  const basketItemAddHandler = (item) => {
+    basket_context.addItem({ ...item, amount: 1 });
+  };
 
-  const basketItemDeleteHandler = (id) => {};
+  const basketItemDeleteHandler = (id) => {
+    basket_context.deleteItem(id);
+  };
 
   const basketOrders = (
     <ul className={classes["basket-meals"]}>
@@ -20,8 +24,8 @@ const Basket = (props) => {
           name={order.name}
           amount={order.amount}
           price={order.price}
-          addItem={() => basketItemAddHandler}
-          deleteItem={() => basketItemDeleteHandler}
+          addItem={()=>basketItemAddHandler(order)}
+          deleteItem={() => basketItemDeleteHandler(order.id)}
         />
       ))}
     </ul>
@@ -32,7 +36,7 @@ const Basket = (props) => {
       {basketOrders}
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>{basket_context.totalAmount}</span>
+        <span>{basket_context.totalAmount} TL</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} onClick={props.hideBasket}>

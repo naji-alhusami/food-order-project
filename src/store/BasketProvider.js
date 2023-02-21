@@ -24,10 +24,30 @@ const basketReducer = (state, action) => {
       };
       newItems = [...state.items];
       newItems[itemIndex] = newItem;
-      console.log(newItem);
-      console.log(newItems);
     } else {
       newItems = state.items.concat(action.item);
+    }
+
+    return {
+      items: newItems,
+      totalAmount: newTotalAmount,
+    };
+  }
+
+  if (action.type === "DELETE") {
+    const itemIndex = state.items.findIndex((item) => item.id === action.id);
+    const existingBasketItem = state.items[itemIndex];
+    const newTotalAmount = state.totalAmount - existingBasketItem.price;
+    let newItems;
+    if (existingBasketItem.amount === 1) {
+      newItems = state.items.filter((item) => item.id !== action.id);
+    } else {
+      const newItem = {
+        ...existingBasketItem,
+        amount: existingBasketItem.amount - 1,
+      };
+      newItems = [...state.items];
+      newItems[itemIndex] = newItem;
     }
 
     return {
