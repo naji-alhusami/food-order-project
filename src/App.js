@@ -1,10 +1,11 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import CardsBenefits from "./components/AppAdvantages/CardBenefits";
 import SliderSettings from "./components/Restaurants/SliderSettings";
 import MealsOffered from "./components/Meals/MealsOffered";
 import Basket from "./components/Basket/Basket";
 import Footer from "./components/Footer/Footer";
+import BasketProvider from "./store/BasketProvider";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
   }
 
   return (
-    <Fragment>
+    <BasketProvider>
       {basketVisible && <Basket hideBasket={hideBasketHandler} />}
       <Navbar showBasket={showBasketHandler} />
       <main>
@@ -28,7 +29,7 @@ function App() {
         <CardsBenefits />
       </main>
       <Footer />
-    </Fragment>
+    </BasketProvider>
   );
 }
 
