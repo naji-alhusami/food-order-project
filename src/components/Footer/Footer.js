@@ -11,22 +11,8 @@ const Footer = () => {
           <img src={appIcon} alt="app-icon" />
           <h1 className={classes.header}>FOOD2DOOR</h1>
         </div>
-        {/* <div>
-          <h1>Test</h1>
-          <h1> Well never to spam you or share your email</h1>
-        </div> */}
         <div className={classes.socialMedia}>
-          {/* <div>
-            <ul className={classes.footerList}>
-              <li>Home</li>
-              <li>Test</li>
-              <li>About</li>
-              <li>Contact Us</li>
-            </ul>
-          </div>
-          <br /> */}
-          {/* <div> */}
-          <a href="#">
+          <a href="https://www.example.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -38,7 +24,7 @@ const Footer = () => {
               />
             </svg>
           </a>
-          <a href="#">
+          <a href="https://www.example.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
@@ -50,7 +36,7 @@ const Footer = () => {
               />
             </svg>
           </a>
-          <a href="#">
+          <a href="https://www.example.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 488 512"
@@ -62,7 +48,6 @@ const Footer = () => {
               />
             </svg>
           </a>
-          {/* </div> */}
         </div>
       </footer>
     </div>

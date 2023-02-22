@@ -12,7 +12,7 @@ const SliderContent = (props) => {
 
   useEffect(() => {
     $(sliderRef.current).not(".slick-initialized").slick(props.settings);
-  }, []);
+  }, [props.settings]);
 
   const hendlePrevClick = () => {
     $(sliderRef.current).slick("slickPrev");

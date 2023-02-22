@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import { act } from "react-dom/test-utils";
 import BasketContext from "./BasketContext";
 
 const defaultBasketState = {
