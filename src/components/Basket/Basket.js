@@ -26,7 +26,7 @@ const Basket = (props) => {
 
   const submitOrderHandler = async (userData) => {
     setIsSubmit(true);
-    const response = await fetch(
+    await fetch(
       "https://react-hooks-9cae4-default-rtdb.firebaseio.com/orders.json",
       {
         method: "POST",
