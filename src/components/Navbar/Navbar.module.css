@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   background-color: #1dce23;
   color: white;
   display: flex;
@@ -35,5 +35,4 @@
   width: 105%;
   height: 100%;
   object-fit: cover;
-  /* transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem); */
 }

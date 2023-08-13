@@ -10,7 +10,11 @@ const Navbar = (props) => {
     <Fragment>
       <nav className={classes.Navbar}>
         <div className={classes["icon-title"]}>
-          <img src={appIcon} alt="app-icon" />
+          <img
+            src={appIcon}
+            alt="app-icon"
+            style={{ width: "18%" }}
+          />
           <h1 className={classes.header}>FOOD2DOOR</h1>
         </div>
         <BasketButton showBasket={props.showBasket} />

@@ -28,3 +28,11 @@
   font-size: 2rem;
   margin-top: 0;
 }
+
+/* @media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+} */

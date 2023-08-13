@@ -46,8 +46,14 @@
 }
 
 .arrow {
-  padding: 6.1rem 2rem;
+  padding: 6.1rem 0.5rem;
   cursor: pointer;
   background-color: white;
   z-index: 2;
+}
+
+@media (max-width: 800px) {
+  .restaurants {
+    font-size: 27px;
+  }
 }
